@@ -1,44 +1,55 @@
-const fuentes = [
-  { nombre: "DonGraffiti", archivo: "DonGraffiti.otf" },
-  { nombre: "GrafittiNewYear", archivo: "GrafittiNewYear.otf" },
-  { nombre: "AnotherTag", archivo: "AnotherTag.otf" },
-  { nombre: "StreetWarsDemo", archivo: "StreetWarsDemo.otf" },
-  { nombre: "Decipher", archivo: "Decipher.otf" },
-];
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
 
-// Cargar todas las fuentes
-const styleSheet = document.createElement("style");
-fuentes.forEach(f => {
-  styleSheet.innerHTML += `
-    @font-face {
-      font-family: '${f.nombre}';
-      src: url('fonts/${f.archivo}') format('opentype');
-    }
-  `;
-});
-document.head.appendChild(styleSheet);
+.container {
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+}
 
-document.getElementById("generar").addEventListener("click", () => {
-  const texto = document.getElementById("nombre").value.trim();
-  const salida = document.getElementById("resultado");
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
 
-  if (texto === "") {
-    salida.textContent = "Escribe algo primero 😎";
-    salida.style.fontFamily = "Arial";
-    return;
-  }
+#nombre {
+  padding: 10px;
+  width: 80%;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;
+}
 
-  // Elegir una fuente aleatoria
-  const randomFont = fuentes[Math.floor(Math.random() * fuentes.length)];
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff0077;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-  // Puedes dejar un color fijo (por ejemplo blanco o rojo)
-  // const color = "#ffffff";
+button:hover {
+  background-color: #ff3388;
+}
 
-  // O generar un color sólido aleatorio
-  const colores = ["#f4f4f4", "#ff4b4b", "#3db2ff", "#ffb830", "#8cff66"];
-  const color = colores[Math.floor(Math.random() * colores.length)];
-
-  salida.textContent = texto;
-  salida.style.fontFamily = randomFont.nombre;
-  salida.style.color = color;
-});
+#resultado {
+  margin-top: 30px;
+  font-size: 4rem;
+  min-height: 100px;
+  font-weight: normal;
+  color: #f4f4f4; /* color base sólido */
+  transition: color 0.3s;
+}
