@@ -1,77 +1,55 @@
-/* Importar tus fuentes locales */
-@font-face {
-  font-family: "DonGraffiti";
-  src: url("fonts/DonGraffiti.otf") format("opentype");
-}
-@font-face {
-  font-family: "GrafittiNewYear";
-  src: url("fonts/GrafittiNewYear.otf") format("opentype");
-}
-@font-face {
-  font-family: "AnotherTag";
-  src: url("fonts/AnotherTag.otf") format("opentype");
-}
-@font-face {
-  font-family: "StreetWarsDemo";
-  src: url("fonts/StreetWarsDemo.otf") format("opentype");
-}
-@font-face {
-  font-family: "Decipher";
-  src: url("fonts/Decipher.otf") format("opentype");
-}
-
 body {
-  background: #0d0d0d;
+  background-color: #111;
   color: #fff;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 40px;
-  background-image: radial-gradient(circle at top left, #222 0%, #000 100%);
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
-  background: rgba(25, 25, 25, 0.9);
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px #00ff99;
+  text-align: center;
   max-width: 600px;
-  margin: auto;
+  padding: 20px;
 }
 
 h1 {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: #00ffaa;
 }
 
-input, select, button {
-  margin: 10px;
-  padding: 10px 15px;
-  font-size: 16px;
-  border-radius: 8px;
+#nombre {
+  padding: 10px;
+  width: 80%;
   border: none;
-}
-
-input, select {
-  background: #111;
-  color: #fff;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;
 }
 
 button {
-  background: #00ff99;
-  color: #000;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff0077;
+  color: white;
   cursor: pointer;
-  transition: 0.3s;
-  font-weight: bold;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background: #00ffaa;
+  background-color: #ff3388;
 }
 
-.resultado {
+#resultado {
   margin-top: 30px;
-  font-size: 60px;
-  text-shadow: 3px 3px 10px #00ffcc;
-  transition: all 0.3s ease-in-out;
+  font-size: 4rem;
+  min-height: 100px;
+  font-weight: normal;
+  color: #f4f4f4; /* color base sólido */
+  transition: color 0.3s;
 }
