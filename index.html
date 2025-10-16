@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generador de Tags Graffiti</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Generador de Tags Graffiti</h1>
+    <p>Escribe tu nombre y genera tu tag:</p>
+
+    <input type="text" id="nombre" placeholder="Escribe tu nombre aquí" />
+
+    <select id="fuente">
+      <option value="DonGraffiti">Don Graffiti</option>
+      <option value="GrafittiNewYear">Graffiti New Year</option>
+      <option value="AnotherTag">Another Tag</option>
+      <option value="StreetWarsDemo">Street Wars</option>
+      <option value="Decipher">Decipher</option>
+    </select>
+
+    <button onclick="generarTag()">Generar Tag</button>
+
+    <div id="resultado" class="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
